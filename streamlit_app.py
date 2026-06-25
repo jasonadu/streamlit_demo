@@ -1,11 +1,10 @@
 import streamlit as st
-from langchain_openai import ChatOpenAI
+# from langchain_openai import ChatOpenAI
 import os
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableBranch, RunnablePassthrough
-import sys
-sys.path.append("notebook/C3 搭建知识库") # 将父目录放入系统路径中
+
 from zhipuai_embedding import ZhipuAIEmbeddings
 from zhipuai_llm import ZhipuaiLLM
 from langchain_community.vectorstores import Chroma
@@ -82,7 +81,7 @@ def gen_response(chain, input, chat_history):
 
 # Streamlit 应用程序界面
 def main():
-    st.markdown('### 🦜🔗 动手学大模型应用开发')
+    st.markdown('### 🦜🔗 唠十块钱的')
 
     # 用于跟踪对话历史
     if "messages" not in st.session_state:
